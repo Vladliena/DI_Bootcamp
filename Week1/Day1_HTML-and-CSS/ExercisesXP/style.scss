@@ -1,0 +1,48 @@
+.yellow_background {
+    span {
+        background-color: yellow;
+    }
+}
+
+ul {
+    h3 {
+        text-decoration: underline;
+    }
+}
+
+.img_wrapper {
+    text-align: center;
+
+    img {
+        width: 300px;
+    }
+}
+
+.red_flex {
+    text-align: center;
+
+    table {
+display: flex;
+justify-content: center;
+margin-bottom: 60px;
+        tr,
+        th,
+        td {
+            border: 2px black solid;
+        }
+        td{
+            padding: 15px 15px;
+        }
+    }
+    img{
+        border: 5px orange solid;
+        width: 500px;
+    }
+}
+
+.red_border {
+    border: 2px red solid;
+    color: red;
+    width: 1260px;
+    display: inline-block;
+}

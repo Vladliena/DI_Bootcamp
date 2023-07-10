@@ -1,0 +1,42 @@
+.yellow_background span {
+  background-color: yellow;
+}
+
+ul h3 {
+  text-decoration: underline;
+}
+
+.img_wrapper {
+  text-align: center;
+}
+.img_wrapper img {
+  width: 300px;
+}
+
+.red_flex {
+  text-align: center;
+}
+.red_flex table {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.red_flex table tr,
+.red_flex table th,
+.red_flex table td {
+  border: 2px black solid;
+}
+.red_flex table td {
+  padding: 15px 15px;
+}
+.red_flex img {
+  border: 5px orange solid;
+  width: 500px;
+}
+
+.red_border {
+  border: 2px red solid;
+  color: red;
+  width: 1260px;
+  display: inline-block;
+}/*# sourceMappingURL=style.css.map */
