@@ -1,24 +1,18 @@
 section {
     display: grid;
-    grid-template: 50px 50px 50px 50px / 50px 50px 50px 50px 50px 50px;
+    grid-template: repeat(4, 50px) / repeat(6,50px);
     column-gap: 40px;
     row-gap: 10px;
     justify-content: center;
-}
 
-.cell2 {
-    grid-column-start: 6;
-}
+    .cell4{
+        grid-column: 6 / -1;
+    }
+    .cell2 {
+        grid-column-start: 6;
+    }
 
-.cell10 {
-    grid-column-start: 1;
-}
-
-.cell11 {
-    grid-column-start: 6;
-    grid-row-start: 3;
-}
-
-.cell12 {
-    grid-column-start: 6;
+    .cell12 {
+        grid-column-start: 6;
+    }
 }

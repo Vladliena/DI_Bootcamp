@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: black;
+  width: 100%;
+  padding: 15px;
+}
+header .container {
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+}
+header .container .nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+header .container .nav ul .nav_el {
+  color: azure;
+  margin: 0 15px;
+}
+
+.shop_section {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+.shop_section .container .products {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.shop_section .container .products article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+  position: relative;
+}
+.shop_section .container .products article:hover {
+  box-shadow: 1px 2px 3px 4px rgba(12, 12, 12, 0.2);
+}
+.shop_section .container .products article:hover .hover_icons {
+  display: block;
+}
+.shop_section .container .products article:not(:nth-of-type(2))::before {
+  content: "NEW";
+  display: block;
+  border-radius: 100%;
+  background-color: green;
+  color: white;
+  top: 10px;
+  left: 5px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shop_section .container .products article:nth-of-type(2)::after {
+  content: "-10%";
+}
+.shop_section .container .products article::after {
+  content: "-12%";
+  display: block;
+  border-radius: 100%;
+  background-color: rgb(198, 3, 3);
+  color: white;
+  top: 10px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shop_section .container .products article img {
+  display: block;
+  width: 250px;
+  margin-bottom: 20px;
+}
+.shop_section .container .products article h4 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.shop_section .container .products article .price {
+  color: green;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.shop_section .container .products article button {
+  padding: 15px;
+  color: rgb(158, 158, 158);
+  background-color: inherit;
+  border: 2px solid rgb(204, 204, 204);
+  margin-bottom: 20px;
+}
+.shop_section .container .products article button:hover {
+  background-color: rgb(4, 154, 129);
+  color: white;
+}
+.shop_section .container .products article .hover_icons {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  margin: auto;
+  display: none;
+}
+.shop_section .container .products article .hover_icons i {
+  background-color: white;
+  padding: 10px;
+  position: relative;
+}
+.shop_section .container .products article .hover_icons i:hover {
+  background-color: rgb(4, 154, 129);
+  color: white;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup .show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=products.css.map */
