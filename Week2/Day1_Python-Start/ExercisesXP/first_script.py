@@ -40,6 +40,7 @@ print((99**3) * 8)
 
 computer_brand = "acer nitro 5"
 print("I have a {} computer".format(computer_brand))
+print(f"I have a {computer_brand} computer")
 
 
 # Exercise 5 : Your Information
