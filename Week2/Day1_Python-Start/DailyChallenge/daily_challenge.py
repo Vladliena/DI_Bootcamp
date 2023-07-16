@@ -23,12 +23,10 @@ print (some_words[-1])
 
 # Using a for loop, construct the string character by character: Print the first character, then the second, then the third, until the full string is printed. For example:
 
-# list_from_words = list(some_words)
-for i in range(0,len(some_words)):
-    print(some_words[i])
+for i in range(len(some_words)):
+    print(some_words[:i+1])
 
 # Bonus: Swap some characters around then print the newly jumbled string (hint: look into the shuffle method).
-
 
 shuffled_list = ''.join(random.sample(some_words,len(some_words)))
 print(shuffled_list)
