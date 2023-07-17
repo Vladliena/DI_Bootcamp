@@ -34,5 +34,3 @@ elif 9 <= month <= 11:
     print('It is Autumn')
 else:
     print('Its Winter')
-
-
