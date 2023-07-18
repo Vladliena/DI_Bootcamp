@@ -22,7 +22,6 @@ print(new_dict)
 
 # family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
 
-
 # How much does each family member have to pay ?
 
 # Print out the family’s total cost for the movies.
