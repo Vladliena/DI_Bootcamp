@@ -6,11 +6,11 @@ import random
 # # Call the function, and make sure the message displays correctly.
 
 
-# def display_message():
-#     return print("Im learning Python in Developers Institute")
+def display_message():
+    return print("Im learning Python in Developers Institute")
 
 
-# display_message()
+display_message()
 
 # # 🌟 Exercise 2: What’s Your Favorite Book ?
 # # Instructions
@@ -20,11 +20,11 @@ import random
 # # Call the function, make sure to include a book title as an argument when calling the function.
 
 
-# def favorite_book(title):
-#     return print(f"One of my favorite books is {title}")
+def favorite_book(title):
+    return print(f"One of my favorite books is {title}")
 
 
-# favorite_book("Harry Potter")
+favorite_book("Harry Potter")
 
 # # Exercise 3 : Some Geography
 # # Instructions
@@ -35,11 +35,11 @@ import random
 # # Call your function.
 
 
-# def describe_city(city, country="Ukraine"):
-#     return print(f"{city} is a capital of {country}")
+def describe_city(city, country="Ukraine"):
+    return print(f"{city} is a capital of {country}")
 
 
-# describe_city("Kyiv")
+describe_city("Kyiv")
 
 # # Exercise 4 : Random
 # # Instructions
@@ -47,15 +47,15 @@ import random
 # # Compare the two numbers, if it’s the same number, display a success message, otherwise show a fail message and display both numbers.
 
 
-# def randomizer(n):
-#     randon_number = random.randint(1, 100)
-#     if n == randon_number:
-#         return print("Its the same number!")
-#     else:
-#         return print(f"{n} and {randon_number} are not the same!")
+def randomizer(n):
+    randon_number = random.randint(1, 100)
+    if n == randon_number:
+        return print("Its the same number!")
+    else:
+        return print(f"{n} and {randon_number} are not the same!")
 
 
-# randomizer(55)
+randomizer(55)
 
 # # 🌟 Exercise 5 : Let’s Create Some Personalized Shirts !
 # # Instructions
@@ -71,15 +71,15 @@ import random
 # # Bonus: Call the function make_shirt() using keyword arguments.
 
 
-# def make_shirt(size="L", message="I love Python"):
-#     return print(f"The size of the shirt is {size} and the text is {message}")
+def make_shirt(size="L", message="I love Python"):
+    return print(f"The size of the shirt is {size} and the text is {message}")
 
 
-# make_shirt("M", "I love codding")
-# make_shirt()
-# make_shirt("M")
-# make_shirt("S", "I love cats")
-# make_shirt(size="XL", message="I love dogs")
+make_shirt("M", "I love codding")
+make_shirt()
+make_shirt("M")
+make_shirt("S", "I love cats")
+make_shirt(size="XL", message="I love dogs")
 
 # # 🌟 Exercise 6 : Magicians …
 # # Instructions
@@ -93,25 +93,25 @@ import random
 # # Call the function show_magicians() to see that the list has actually been modified.
 
 
-# magician_names = ["Harry Houdini", "David Blaine", "Criss Angel"]
+magician_names = ["Harry Houdini", "David Blaine", "Criss Angel"]
 
 
-# def show_magicians():
-#     for i in magician_names:
-#         print(i)
+def show_magicians():
+    for i in magician_names:
+        print(i)
 
 
-# show_magicians()
+show_magicians()
 
 
-# def make_great(some_list):
-#     for i in range(len(some_list)):
-#         some_list[i] = f"the Great {some_list[i]}"
-#     return some_list
+def make_great(some_list):
+    for i in range(len(some_list)):
+        some_list[i] = f"the Great {some_list[i]}"
+    return some_list
 
 
-# make_great(magician_names)
-# show_magicians()
+make_great(magician_names)
+show_magicians()
 
 
 # # Exercise 7 : Temperature Advice
@@ -142,31 +142,31 @@ import random
 # # Bonus: Instead of asking for the season, ask the user for the number of the month (1 = January, 12 = December). Determine the season according to the month.
 
 
-# def get_random_temp(season):
-#     if 9 <= season <= 12 or 1 <= season <= 2:
-#         degree = round(random.uniform(-10, 16), 1)
-#         return degree
-#     elif 3 <= season <= 8:
-#         degree = round(random.uniform(16, 40), 1)
-#         return degree
+def get_random_temp(season):
+    if 9 <= season <= 12 or 1 <= season <= 2:
+        degree = round(random.uniform(-10, 16), 1)
+        return degree
+    elif 3 <= season <= 8:
+        degree = round(random.uniform(16, 40), 1)
+        return degree
 
 
-# def main():
-#     main_degree = get_random_temp(int(input("Write me the number of the month: ")))
-#     print(f"The temperature right now is {main_degree} degrees Celsius.")
-#     if main_degree <= 0:
-#         print(f"Brrr, thats freezing! Wear some extra layers today")
-#     elif 0 <= main_degree <= 16:
-#         print(f"Quite chilly! Don’t forget your coat")
-#     elif 16 <= main_degree <= 23:
-#         print(f"Such a good weather!")
-#     elif 24 <= main_degree <= 32:
-#         print(f"Ok...its quite hot outside")
-#     else:
-#         print(f"We are in hell D:")
+def main():
+    main_degree = get_random_temp(int(input("Write me the number of the month: ")))
+    print(f"The temperature right now is {main_degree} degrees Celsius.")
+    if main_degree <= 0:
+        print(f"Brrr, thats freezing! Wear some extra layers today")
+    elif 0 <= main_degree <= 16:
+        print(f"Quite chilly! Don’t forget your coat")
+    elif 16 <= main_degree <= 23:
+        print(f"Such a good weather!")
+    elif 24 <= main_degree <= 32:
+        print(f"Ok...its quite hot outside")
+    else:
+        print(f"We are in hell D:")
 
 
-# main()
+main()
 
 # Exercise 5 : Star Wars Quiz
 # Instructions
@@ -218,7 +218,7 @@ data = [
 ]
 
 
-def score(a,b,c):
+def score(a, b, c):
     return print(
         f"List of is your wrong answers: {c}\n Number of incorect unswers: {a}\n Number of correct answers {b}"
     )
@@ -237,7 +237,7 @@ def game(some_data):
         else:
             print("You are right!")
             correct_answers += 1
-    return score(incorrect_answers,correct_answers,wrong_answers)
+    return score(incorrect_answers, correct_answers, wrong_answers)
 
 
 game(data)
