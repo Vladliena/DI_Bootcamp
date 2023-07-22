@@ -4,12 +4,12 @@ def decrypt_matrix(matrix):
     num_cols = len(rows[0])
 
     alpha_chars = [''] * num_cols
-    
     for col in range(num_cols):
         for row in range(num_rows):
             char = rows[row][col]
             if char.isalpha():
                 alpha_chars[col] += char
+
     
     for col in range(num_cols):
         alpha_chars[col] = ' '.join([word if word.isalpha() else ' ' for word in alpha_chars[col].split()])
