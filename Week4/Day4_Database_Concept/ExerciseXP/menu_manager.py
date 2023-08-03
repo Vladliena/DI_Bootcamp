@@ -32,12 +32,12 @@ class MenuManager(MenuItem):
     
     
         
-client1 = MenuItem('Beef',5)
-client1.save()
-client1.delete('Beef',5)
-client1.update('Onion',1,'Milk')
-client2 = MenuManager.get_by_name('Chicken')
-clients = MenuManager.all_items()
+# client1 = MenuItem('Beef',5)
+# client1.save()
+# client1.delete('Beef',5)
+# client1.update('Onion',1,'Milk')
+# client2 = MenuManager.get_by_name('Chicken')
+# clients = MenuManager.all_items()
 
-connection.close()
+# connection.close()
     

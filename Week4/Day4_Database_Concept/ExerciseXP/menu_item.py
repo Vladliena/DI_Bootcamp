@@ -45,17 +45,18 @@ class MenuItem:
      
      
     @staticmethod   
-    def update(other_product,price,name):
+    def update(other_product,price,old_name):
      try:
         with connection:
             with connection.cursor() as curs:
                 query = f"""
                 UPDATE menu_items
                 SET items_name = '{other_product}',item_price = {price}
-                WHERE items_name = '{name}'
+                WHERE items_name = '{old_name}'
                 """
                 curs.execute(query)
                 connection.commit()
      except Exception as err:
         print("SOME ERROR",err)
         
+
