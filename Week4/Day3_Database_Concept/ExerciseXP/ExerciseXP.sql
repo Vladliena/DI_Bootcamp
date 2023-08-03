@@ -111,9 +111,9 @@
 -- where customer.first_name = 'Matthew'and customer.last_name = 'Mahan' and film.rental_rate > 4
 -- and rental.return_date between '2005-07-28' and '2005-08-01'
 
--- select * from inventory
--- inner join film on film.film_id = inventory.inventory_id
+-- select film.title, film.replacement_cost from inventory
+-- inner join film on film.film_id = inventory.film_id
 -- inner join rental on rental.inventory_id = inventory.inventory_id
 -- inner join customer on customer.customer_id = rental.customer_id
 -- where customer.first_name = 'Matthew'  and customer.last_name = 'Mahan' and film.description ilike '%boat%' or film.title ilike '%boat%'
--- order by film.replacement_cost desc 
+-- order by film.replacement_cost desc
