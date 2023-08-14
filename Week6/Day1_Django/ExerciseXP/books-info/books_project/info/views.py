@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from .models import Book, BookReview
 from django.views.decorators.csrf import csrf_exempt
-from django.core.serializers import serialize
 
 
 # Create your views here.
@@ -69,7 +68,7 @@ def create_book(request):
             return JsonResponse(response_data)
         else:
             response_data = {"error": "Incomplete data provided"}
-            return JsonResponse(response_data, status=400)
+            return JsonResponse(response_data)
     else:
         response_data = {"error": "Invalid request method"}
-        return JsonResponse(response_data, status=405)
+        return JsonResponse(response_data)

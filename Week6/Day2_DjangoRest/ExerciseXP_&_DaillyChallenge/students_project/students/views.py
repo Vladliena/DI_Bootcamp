@@ -4,14 +4,23 @@ from .serializers import StudentSerializer
 from rest_framework.views import Response
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
+from django.http import JsonResponse
 # Create your views here.
 
 class Student_list(APIView):
-    
-    def get(self, request, *args, **kwargs):
-        students = Student.objects.all()
-        serializer = StudentSerializer(students, many=True)
+    def get(self,request):
+        date_joined_param = request.GET.get('date_joined')
+        if date_joined_param:
+            students = Student.objects.filter(date_joined=date_joined_param)
+        else:
+            students = Student.objects.all()
+        serializer = StudentSerializer(students,many=True)
         return Response(serializer.data)
+    
+    # def get(self, request, *args, **kwargs):
+    #     students = Student.objects.all()
+    #     serializer = StudentSerializer(students, many=True)
+    #     return Response(serializer.data)
     
     def post(self,request,*args,**kwargs):
         serializer = StudentSerializer(data=request.data)
