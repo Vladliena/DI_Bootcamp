@@ -123,7 +123,7 @@ header .hover-underline-animation:hover:after {
 .main_section .main_section-img {
   width: 650px;
   flex-shrink: 0;
-  height: 355px;
+  height: 375px;
   display: block;
   filter: grayscale(1);
   mix-blend-mode: luminosity;
