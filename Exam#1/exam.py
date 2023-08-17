@@ -144,7 +144,7 @@ class BankAccount():
     def __init__(self, balance, account_holder):
         self.__balance = balance
         self.__account_holder = account_holder
-        BankAccount.total_accounts += account_holder
+        BankAccount.total_accounts += 1
         
     def deposit(self,new_amount):
         if new_amount > 0:
