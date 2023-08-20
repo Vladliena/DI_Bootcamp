@@ -24,7 +24,7 @@ class RentalView(APIView):
 
     def get(self, request, pk=None, format=None):
         if pk is None:
-            rentals = Rental.objects.order_by('retutn_date','rental_date')
+            rentals = Rental.objects.order_by('return_date','rental_date')
             serializer = RentalSerializer(rentals, many=True)
             return Response(serializer.data)
         else:
@@ -89,12 +89,17 @@ class VehicleView(APIView):
     
     permission_classes = [AllowAny]
 
-    def get(self, request, action=None, *args, **kwargs):
+    def get(self, request, pk=None, action=None, *args, **kwargs):
         if action == 'add':
             return self.post(request)
-        vehicles = Vehicle.objects.all().order_by('vehicle_type')
-        serializer = VehicleSerializer(vehicles, many=True)
-        return Response(serializer.data)
+        elif pk is None:
+            vehicles = Vehicle.objects.all().order_by('vehicle_type')
+            serializer = VehicleSerializer(vehicles, many=True)
+            return Response(serializer.data)
+        else:
+            vehicle = Vehicle.objects.get(id=pk)
+            serializer = VehicleSerializer(vehicle)
+            return Response(serializer.data)
 
     def post(self, request, format=None):
         serializer = VehicleSerializer(data=request.data)
