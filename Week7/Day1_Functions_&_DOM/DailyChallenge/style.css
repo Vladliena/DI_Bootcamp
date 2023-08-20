@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+    padding: 10px;
+}
+
+.planet {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    border: 2px solid white;
+}
+
+
+.moon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgb(237, 237, 237);
+    border: 5px solid red;
+}
+
+.Earth {
+    background-color: green;
+}
+
+.Venus {
+    background-color: red;
+}
+
+.Uranus {
+    background-color: lightblue;
+}
+
+.Jupiter {
+    background-color: lightgrey;
+}
+
+.Neptune {
+    background-color: blue;
+}
+
+.Mercury {
+    background-color: darkgrey;
+}
+
+.Saturn {
+    background-color: beige;
+}
+
+.Mars {
+    background-color: orange;
+}
