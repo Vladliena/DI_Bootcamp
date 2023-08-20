@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from rent.views import RentalView, CustomerView, VehicleView, RentalStationView
+from rent.views import RentalView, CustomerView, VehicleView, RentalStationView, MonthlyStatsView, PopularStationView,PopularVehicleTypeView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
@@ -30,6 +30,9 @@ urlpatterns = [
     path('rent/station/', RentalStationView.as_view(), name='station-list'),
     path('rent/station/add/', RentalStationView.as_view(), {'action': 'add'}, name='station-add'),
     path('rent/station/<int:pk>/', RentalStationView.as_view(), name='station-detail'),
+     path('rent/stats/monthly/', MonthlyStatsView.as_view(), name='monthly-stats'),
+    path('rent/stats/popular_station/', PopularStationView.as_view(), name='popular-station'),
+    path('rent/stats/popular_vehicle_type/', PopularVehicleTypeView.as_view(), name='popular-vehicle-type'),
     # path('rent/station/distribution/', RentalStationView.as_view(), {'action': 'distribution'}, name='station-distribution'),
     # path('rent/station/distribute/', RentalStationView.as_view(), {'action': 'distribute'}, name='station-distribute'),
 ]
