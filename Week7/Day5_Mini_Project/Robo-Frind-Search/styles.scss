@@ -1,0 +1,37 @@
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@500;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sega-logo-font');
+
+body {
+    background-color: blueviolet;
+    background-image: url('images/circuit-pattern.png');
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgb(32, 172, 32);
+
+    .logo {
+        font-family: 'SEGA LOGO FONT', sans-serif;
+        color: rgb(13, 63, 39);
+    }
+
+    input {
+        font-family: 'Tektur', cursive;
+    }
+}
+
+.card_layout {
+    .card {
+        background-color: rgb(8, 158, 153);
+        background-image: url('images/card-pattern.png');
+    }
+
+    img {
+        background-color: rgb(13, 27, 63);
+        border-radius: 100%;
+    }
+}
