@@ -22,6 +22,9 @@ async function getData(event) {
     }
 }
 
+
+
+
 function createImg(data) {
     let gif = data.data[`${Math.round(Math.random() * data.data.length)}`].images.original.url
     const divImg = document.createElement('div')
@@ -36,11 +39,17 @@ function createImg(data) {
     deleteAll()
 }
 
+
+
+
 function deleteImg(img, btn) {
     btn.addEventListener('click', () => {
         img.remove()
     })
 }
+
+
+
 
 let buttonCreated = true
 function deleteAll() {
