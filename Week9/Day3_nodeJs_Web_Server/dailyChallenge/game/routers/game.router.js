@@ -3,7 +3,7 @@ const router = express.Router()
 const { emojis } = require('../config/db')
 
 
-let totlScore = 0
+let totalScore = 0
 let currentEmoji = null;
 
 function randomEmoji() {
@@ -15,40 +15,37 @@ function distractors() {
     const distractors = []
     const currentEmojiName = currentEmoji.name
 
-    for (let i = 0; i < 4; i++) {
-        let randomIndex; // Declare randomIndex outside the do...while block
-
-        do {
-            randomIndex = Math.floor(Math.random() * emojis.length);
-        } while (emojis[randomIndex].name === currentEmojiName || distractors.includes(emojis[randomIndex].name))
-
-        distractors.push(emojis[randomIndex].name)
+    while ((distractors.length < 4)) {
+        let randomIndex = Math.floor(Math.random() * emojis.length)
+        console.log(randomIndex, emojis[randomIndex].name, currentEmojiName)
+        if (emojis[randomIndex].name != currentEmojiName && !distractors.includes(emojis[randomIndex].name)) {
+            console.log(distractors)
+            distractors.push(emojis[randomIndex].name)
+        }
     }
-
+    console.log('done')
     return distractors
 }
 
 
 router.get('/game', (req, res) => {
     randomEmoji();
-    let options = distractors()
-    console.log(options)
-    // const options = [...distractors()];
-    // res.json({ emoji: currentEmoji.emoji, options });
+    let options = [currentEmoji.name, ...distractors()]
+    res.json({ emoji: currentEmoji.emoji, options });
 });
 
 router.post('/guess', (req, res) => {
-    const guess = req.body.guess;
-    if (guess === currentEmoji.name) {
+    const {name} = req.body;
+    if (name == currentEmoji.name) {
         totalScore++;
-        res.json({ message: 'Correct!', score });
+        res.json({ message: 'Correct!', totalScore });
     } else {
-        res.json({ message: 'Incorrect! The correct answer is ' + currentEmoji.name, score });
+        res.json({ message: 'Incorrect! The correct answer is ' + currentEmoji.name, totalScore });
     }
 });
 
 router.get('/score', (req, res) => {
-    res.json({ score });
+    res.json({ totalScore });
 });
 
 
