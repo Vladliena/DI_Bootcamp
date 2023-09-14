@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px grey solid;
+    width: 500px;
+    background-color: beige;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    height: 100vh;
+    padding-top: 180px;
+
+}

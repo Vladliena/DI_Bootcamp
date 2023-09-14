@@ -1,0 +1,12 @@
+.header{
+    color: rgb(78, 78, 242);
+}
+
+
+.task_txt:hover {
+    text-decoration: line-through;
+}
+
+#task{
+    margin-top: 20px;
+}
