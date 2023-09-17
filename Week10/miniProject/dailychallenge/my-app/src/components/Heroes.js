@@ -44,7 +44,7 @@ const Heroes = () => {
         <>
             <header style={{ backgroundColor: 'red' }}>
                 <h1>Superheroes Memory Game</h1>
-                <span>Score:{score.currentscore}  |  Total Score:{score.topScore}</span>
+                <span>Score:{score.currentscore}  |  Top Score:{score.topScore}</span>
             </header>
             <div style={{ backgroundColor: 'red', marginTop: '10px' }}>Get points by clicking on an image but don't click on any more than once!</div>
             <div className='wrapper'>
