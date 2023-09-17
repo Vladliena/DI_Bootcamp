@@ -7,16 +7,36 @@ import './Heroes.css'
 const Heroes = () => {
     const [superHeroes, setSuperHeroes] = useState()
     const [score, setScore] = useState({
-        score: 0,
-        totalScore: 0
+        currentscore: 0,
+        topScore: 0
     })
 
     useEffect(() => {
         setSuperHeroes(heroes.superheroes)
     }, [])
 
+    function shuffle() {
+        superHeroes.sort(() => Math.random() - 0.5);
+    }
+
     function game(id) {
-        
+        shuffle()
+        let hero = superHeroes.find(hero => hero.id === id && !hero.clicked)
+        if (hero) {
+            hero.clicked = true
+            setSuperHeroes([...superHeroes])
+            setScore({ ...score, currentscore: score.currentscore + 1 })
+        } else {
+            if (score.currentscore > score.topScore) {
+                setScore({ ...score, currentscore: 0, topScore: score.currentscore })
+            } else {
+                setScore({ ...score, currentscore: 0, topScore: score.topScore })
+            }
+            superHeroes.forEach(hero => {
+                hero.clicked = false
+                setSuperHeroes(previousHeroes => [...previousHeroes])
+            })
+        }
     }
 
 
@@ -24,7 +44,7 @@ const Heroes = () => {
         <>
             <header style={{ backgroundColor: 'red' }}>
                 <h1>Superheroes Memory Game</h1>
-                <span>Score:{score.score}  |  Total Score:{score.totalScore}</span>
+                <span>Score:{score.currentscore}  |  Total Score:{score.topScore}</span>
             </header>
             <div style={{ backgroundColor: 'red', marginTop: '10px' }}>Get points by clicking on an image but don't click on any more than once!</div>
             <div className='wrapper'>
